@@ -15,6 +15,9 @@ const nextConfig = {
           checkout: `checkout@${
             process.env.MODULE_CHECKOUT_ENTRYPOINT_URL
           }/_next/static/${isServer ? "ssr" : "chunks"}/checkoutEntry.js`,
+          main: `main@${process.env.MODULE_MAIN_ENTRYPOINT_URL}/_next/static/${
+            isServer ? "ssr" : "chunks"
+          }/mainEntry.js`,
         },
         filename: "static/chunks/coreEntry.js",
         runtime: false,
