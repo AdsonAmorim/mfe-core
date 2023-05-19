@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 
-const Checkout = dynamic<any>(() => import("checkout/pages/checkout"));
-const Home = dynamic<any>(() => import("main/pages/home"));
+const Checkout = dynamic<any>((): any => import("checkout/pages/checkout"));
+const Home = dynamic<any>((): any => import("main/pages/home"));
 
-const routeTypes = ["/checkout", "/home"] as const;
+const routeTypes = ["/home"] as const;
 export type IRoute = (typeof routeTypes)[number];
 
 export const routes = {

@@ -1,4 +1,4 @@
-export const getDomainOnServerSide = ({ req, res, query }) => {
+export const getDomainOnServerSide = ({ req, res, query }: any) => {
   const {
     headers: { domain, host },
   } = req;
