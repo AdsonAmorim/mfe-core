@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
 
-App.getInitialProps = async ({ Component, ctx }): AppInitialProps => {
+App.getInitialProps = async ({ Component, ctx }: any) => {
   const { asPath: pathname, req, res, query } = ctx;
 
   const domain = getDomainOnServerSide({ ...ctx });
