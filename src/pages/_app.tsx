@@ -14,9 +14,9 @@ App.getInitialProps = async ({ Component, ctx }: any) => {
   const domain = getDomainOnServerSide({ ...ctx });
 
   // Por algum motivo dá problema em produção
-  // if (pathname === "/") {
-  //   return res?.writeHead(301, { Location: "/home" })?.end();
-  // }
+  if (pathname === "/") {
+    return res?.writeHead(301, { Location: "/home" })?.end();
+  }
 
   return {
     pageProps: { domain, pathname },
